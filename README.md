@@ -25,21 +25,24 @@ This is how the package will work.
 
 1. Define GITLAB_API_URL, PORTAL_API_URL & PORTAL_AUTH_TOKEN CI/CD variable value in your Git repository.
 
+```
 - GITLAB_API_URL - This is your Gitlab API URL where your artifact is located for a specific job.
-Example : /projects/:projectid/jobs/artifacts/:brance_name/raw/*artifact_path?job=name
+ Example : /projects/:projectid/jobs/artifacts/:brance_name/raw/*artifact_path?job=name
 - PORTAL_API_URL - This is your own Report Portal instance Import API URL.
 - PORTAL_AUTH_TOKEN - This is your Report Portal Authorization token to run the Report Portal API.
+```
 
 Sample value of the variables
 
+```
 - GITLAB_API_URL = https://git.drupalcode.org/api/v4/projects/25920/jobs/artifacts/9.1.x/raw/junit.xml?job=phpunit
 - PORTAL_API_URL = https://reportportal.domain.com/api//v1/{projectName}/launch/import
 - PORTAL_AUTH_TOKEN = bearer yourtoken
-
+```
 
 2. Setup a job in your gitlab pipeline and Use  image: node:latest to run your job.
 
-2.  Write this below script within that job to run the report portal npm package.  
+3.  Write this below script within that job to run the report portal npm package.  
 ```
 - npm install report-portal-unit-framework
 - NODE_TLS_REJECT_UNAUTHORIZED=0 node ./node_modules/report-portal/index.js
