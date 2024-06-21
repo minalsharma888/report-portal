@@ -1,7 +1,7 @@
 {
-  "name": "report-portal",
-  "version": "1.0.0",
-  "description": "Package to integrate report portal with any framework",
+  "name": "report-portal-unit-framework",
+  "version": "1.0.1",
+  "description": "Package to integrate report portal with any unit test framework",
   "main": "index.js",
   "directories": {
     "lib": "lib"
