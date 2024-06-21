@@ -58,5 +58,5 @@ report:
   image: node:latest
   script:
     - npm install report-portal-unit-framework
-    - NODE_TLS_REJECT_UNAUTHORIZED=0 node ./node_modules/report-portal/index.js
+    - NODE_TLS_REJECT_UNAUTHORIZED=0 node ./node_modules/report-portal-unit-framework/index.js
 ```
